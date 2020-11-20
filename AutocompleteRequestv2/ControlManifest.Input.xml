@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="axazure" constructor="AutocompleteRequestv2" version="0.0.2" display-name-key="AutocompleteRequestv2" description-key="AutocompleteRequestv2 description" control-type="standard">
+    <external-service-usage enabled="true">
+
+    </external-service-usage>
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+   <property name="field" display-name-key="Field" description-key="Field to be display the result" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="actionName" display-name-key="Action to sent data" description-key="Action to send the data" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="data" display-name-key="Data" description-key="Data field from request to be inserted in field" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="columns" display-name-key="Columns" description-key="Columns to be displayed in the list with the following syntax: DisplayName,fieldName;Name,name;Age,age" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="widthColumn" display-name-key="Width Column" description-key="Minimum width of the column to be displayed" of-type="Whole.None" usage="input" required="false" />
+   
+    <resources>
+      <code path="index.ts" order="1"/>
+      <!-- UNCOMMENT TO ADD MORE RESOURCES
+      <css path="css/AutocompleteRequestv2.css" order="1" />
+      <resx path="strings/AutocompleteRequestv2.1033.resx" version="1.0.0" />
+      -->
+    </resources>
+     <feature-usage>
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+  </control>
+</manifest>
