@@ -89,7 +89,7 @@ const Autocomplete = (props: IAutocompleteProps) => {
                         },
                     }​​​​​,
                     operationType: 0,
-                    operationName: this.props.actionName
+                    operationName: props.actionName
                 };
             }
         };
@@ -128,7 +128,7 @@ const Autocomplete = (props: IAutocompleteProps) => {
         setAllItems([]);
         setTextFieldValue(valueToBeAssigned);
         if (valueToBeAssigned != "") {
-            //this.props.userInputChanged(valueToBeAssigned);
+            props.userInputChanged(valueToBeAssigned);
             _selection.setAllSelected(false)
         }
 
